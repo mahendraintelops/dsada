@@ -1,0 +1,18 @@
+apiVersion: v1
+kind: Service
+metadata:
+  namespace: daad
+  labels:
+    app: daad
+  name: daad
+spec:
+  ports:
+  
+    - protocol: TCP
+      port: 3233
+      targetPort: 3233
+   
+   
+  selector:
+    app: daad
+  type: ClusterIP
